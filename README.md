@@ -21,6 +21,7 @@ In the text editor, add the desired commands or actions that you want to run whe
 # Display a message when the lid is opened
 DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus notify-send "Lid Opened" "The lid of your laptop has been opened."
 
+sleep 10
 # Check if Wi-Fi is already enabled
 if [ "$(nmcli radio wifi)" == "enabled" ]; then
     echo "Wi-Fi is already enabled."
